@@ -1,23 +1,24 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class YoungPhysicist {
+public class Borze {
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Integer rows = Integer.parseInt(br.readLine());
-        int firstCol = 0;
-        int secondCol = 0;
-        int thirdCol = 0;
-        for (int i = 0; i < rows; i++) {
-            String[] row = br.readLine().split(" ");
-            firstCol += Integer.parseInt(row[0]);
-            secondCol += Integer.parseInt(row[1]);
-            thirdCol += Integer.parseInt(row[2]);
+        String s = br.readLine();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < s.length();) {
+            if (s.charAt(i) == '.') {
+                sb.append("0");
+                i++;
+            } else if (s.charAt(i) == '-' && s.charAt(i + 1) == '.') {
+                sb.append("1");
+                i += 2;
+            } else if (s.charAt(i) == '-' && s.charAt(i + 1) == '-') {
+                sb.append("2");
+                i += 2;
+            }
         }
-        if (firstCol == 0 && secondCol == 0 && thirdCol == 0) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+        System.out.println(sb.toString());
     }
 }

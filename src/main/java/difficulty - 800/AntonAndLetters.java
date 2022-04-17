@@ -12,15 +12,15 @@ public class AntonAndLetters {
             String[] letters = s.split(",");
             int counter = 0;
             for (int i = 0; i < letters.length; i++) {
-                boolean isPres = false;
+                boolean present = false;
                 String x = letters[i].trim();
                 for (int j = i + 1; j < letters.length; j++) {
                     if (x.equals(letters[j].trim())) {
-                        isPres = true;
+                        present = true;
                         break;
                     }
                 }
-                if (!isPres) {
+                if (!present) {
                     counter++;
                 }
             }

@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 
+//fastest reader available in java
 public class FastReader {
     final private int BUFFER_SIZE = 1 << 16;
     private DataInputStream din;

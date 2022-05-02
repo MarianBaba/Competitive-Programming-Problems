@@ -12,7 +12,7 @@ public class TheatreSquare {
         if (a == 1) {
             System.out.println(n * m);
         } else {
-            Long c1 = 0L;
+            Long c1 = 0L; // long variable
             while (n > 0) {
                 n -= a;
                 c1++;
